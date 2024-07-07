@@ -15,7 +15,7 @@ export class UserController {
   constructor(
     private getUserUseCase: GetUserUseCase,
     private createUserUseCase: CreateUserUseCase,
-  ) {}
+  ) { }
 
   @Get()
   get() {

@@ -1,0 +1,14 @@
+import { Test, TestingModule } from '@nestjs/testing'
+import { GetUserUseCase } from './usecase/get-user'
+import { UserController } from './user.controller'
+
+describe('UserController', () => {
+  let getUserUseCase: GetUserUseCase
+  let userController: UserController
+
+  beforeEach(async () => {
+    jest.mock('@app/application/user/get-user.')
+
+    const module: TestingModule = await Test.createTestingModule
+  })
+})

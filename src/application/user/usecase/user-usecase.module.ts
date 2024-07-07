@@ -3,7 +3,7 @@ import { GetUserUseCase } from './get-user'
 import { UserService } from '../user.service'
 import { CreateUserUseCase } from './create-user'
 import { TypeOrmModule } from '@nestjs/typeorm'
-import { User } from '@app/domain/user/user.entity'
+import { User } from '@app/domain/entities/user.entity'
 
 @Module({
   imports: [TypeOrmModule.forFeature([User])],

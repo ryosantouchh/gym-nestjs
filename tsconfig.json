@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/infrastructure": ["src/infrastructure"],
+      "@app/infrastructure/*": ["src/infrastructure/*"],
+      "@app/usecase": ["src/usecase"],
+      "@app/usecase/*": ["src/usecase/*"],
+      "@app/domain": ["src/domain"],
+      "@app/domain/*": ["src/domain/*"],
+      "@app/presentation": ["src/presentation"],
+      "@app/presentation/*": ["src/presentation/*"],
+      "@app/shared": ["src/shared"],
+      "@app/shared/*": ["src/shared/*"],
+      "@app/application": ["src/application"],
+      "@app/application/*": ["src/application/*"]
+    }
+  }
+}

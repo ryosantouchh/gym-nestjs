@@ -5,9 +5,9 @@ services:
     image: postgres:latest # Use the latest stable postgres image (consider specifying a tag for a specific version if needed)
     restart: unless-stopped # Restart container automatically unless manually stopped
     environment:
-      - POSTGRES_PASSWORD=your_password # Set your desired password (replace with actual password)
       - POSTGRES_USER=postgres # Username (default)
-      - POSTGRES_DB=anyvet_sample_db
+      - POSTGRES_PASSWORD=your_password # Set your desired password (replace with actual password)
+      - POSTGRES_DB=sample_postgres_data
     volumes:
       - sample_postgres_data:/var/lib/postgresql/data # Persist data volume
     ports:

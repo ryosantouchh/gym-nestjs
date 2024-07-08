@@ -11,7 +11,9 @@ export class TypeOrmConfig {
       username: 'postgres',
       password: 'your_password',
       database:
-        environment === 'production' ? 'gym_sample_db' : 'gym_sample_db',
+        environment === 'production'
+          ? 'sample_postgres_data'
+          : 'sample_postgres_data',
       // entities: [User],
       autoLoadEntities: true,
       synchronize: false, // WARN : Don't change it , this line is so dangerous in production

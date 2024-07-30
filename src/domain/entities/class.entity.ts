@@ -7,15 +7,21 @@ import {
 } from 'typeorm'
 
 @Entity()
-export class User {
+export class Class {
   @PrimaryGeneratedColumn()
   id: number
 
   @Column()
-  firstName: string
+  name: string
 
-  @Column()
-  lastName: string
+  @Column({ default: 60 })
+  duration: number
+
+  // @OneToOne(() => ClassType)
+  // classType: ClassType
+
+  // @OneToMany(() => Trainer, (trainer) => trainer.class)
+  // trainers: Trainer[]
 
   @Column({ default: false })
   isDeleted: boolean

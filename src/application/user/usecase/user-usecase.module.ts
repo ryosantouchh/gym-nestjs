@@ -4,15 +4,27 @@ import { UserService } from '../user.service'
 import { CreateUserUseCase } from './create-user'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { User } from '@app/domain/entities/user.entity'
+import { GetUserByIdUseCase } from './get-user-by-id'
+import { UpdateUserUseCase } from './update-user'
+import { DeleteUserUseCase } from './delete-user'
 
 @Module({
   imports: [TypeOrmModule.forFeature([User])],
   providers: [
-    // need to use service as a provider across usecase module
     UserService,
     GetUserUseCase,
+    GetUserByIdUseCase,
     CreateUserUseCase,
+    UpdateUserUseCase,
+    DeleteUserUseCase,
   ],
-  exports: [GetUserUseCase, CreateUserUseCase],
+  exports: [
+    UserService,
+    GetUserUseCase,
+    GetUserByIdUseCase,
+    CreateUserUseCase,
+    UpdateUserUseCase,
+    DeleteUserUseCase,
+  ],
 })
 export class UserUseCaseModule {}

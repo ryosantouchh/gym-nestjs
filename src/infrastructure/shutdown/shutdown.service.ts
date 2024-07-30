@@ -40,7 +40,7 @@ export class ShutdownService implements OnModuleInit, OnModuleDestroy {
       console.log('Closing TypeOrm connection...')
 
       // Delay before destroy datasource connection
-      await new Promise((resolve) => setTimeout(resolve, 10000))
+      await new Promise((resolve) => setTimeout(resolve, 1000))
       await this.dataSource.destroy()
     }
     console.log('Graceful shutdown complete.')

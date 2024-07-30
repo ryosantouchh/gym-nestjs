@@ -3,10 +3,9 @@ import { UserService } from '../user.service'
 
 @Injectable()
 export class GetUserUseCase {
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) {  }
 
-  execute() {
-    // implement business logic
-    return this.userService.get()
+  async execute() {
+    return await this.userService.findAll()
   }
 }

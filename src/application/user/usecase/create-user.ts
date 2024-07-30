@@ -1,13 +1,12 @@
 import { Injectable } from '@nestjs/common'
 import { UserService } from '../user.service'
-import { CreateUserDto } from '../user.dto'
+import { CreateUserDto } from '../dto/create-user.dto'
 
 @Injectable()
 export class CreateUserUseCase {
   constructor(private userService: UserService) {}
 
-  execute(newUser: CreateUserDto) {
-    // implement business logic
-    return this.userService.create(newUser)
+  async execute(createUserDto: CreateUserDto) {
+    return await this.userService.create(createUserDto)
   }
 }
